@@ -7,9 +7,7 @@ function getAPIdata() {
 	var url = 'https://rest.bandsintown.com/artists';
   var artiest = document.getElementById('artiest').value;
   var request = url + '/' + artiest + '/' + 'events?app_id=c7260e22db3fff1033091fa955c872a8&date=upcoming';
-/*
-  var title = document.getElementById('title');
-  title.innerHTML = artiest */
+
 
 	fetch(request)
 
@@ -107,7 +105,7 @@ var marker = new mapboxgl.Marker()
 	})
 
 
-
+}
 
 function onAPISucces(response) {
 
@@ -143,5 +141,3 @@ var search = document.getElementById('form');
 
 search.classList.add('afterSearch');
 }
-
-
