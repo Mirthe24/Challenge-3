@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+  <html>
+  	<head>
+      <title>Event Searcher</title>
+  		<meta charset="utf-8">
+  		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+  		<link rel="stylesheet" type="text/css" href="style.css"/>
+      <script src="main.js" defer></script>
+      <script src="https://api.mapbox.com/mapbox-gl-js/v1.9.0/mapbox-gl.js"></script>
+     <link href="https://api.mapbox.com/mapbox-gl-js/v1.9.0/mapbox-gl.css" rel="stylesheet" />
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  	</head>
+
+  	<body >
+      <header>
+        <h1>Event Searcher</h1>
+      </header>
+        <p id="intro">Search for your favorite artist below and check if there's an event near you!</p>
+         <form >
+  				<input type="text" name="artiest" id="artiest" placeholder="Type in your artist"/>
+          <input type="button" class="zoekartiest" id="form" onclick="getAPIdata(); introText(); searchBar(); searchButton();" value="&#xf002;"  />	
+  		  </form>
+
+        <main>
+      <div id="titles">
+      <h1 id="title"></h1>
+      <h2 id="title2"></h2>
+      </div>
+
+      <div id="map"></div>
+      <table id= "land" ></table>
+    </main>
+
+  	</body>
+
+  </html>
+
